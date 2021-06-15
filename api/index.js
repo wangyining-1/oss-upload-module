@@ -17,7 +17,7 @@ export const put = async (ObjName, fileUrl, progressFun, moduleName) => {
     let year = new Date().getFullYear();
     let month = new Date().getMonth()+1;
     let day = new Date().getDate();
-
+    //这个接口是用来获取临时授权配置信息的接口   如需配置永久授权注释此接口即可
    await getInOutByPersonId().then( async res => {
         let configInfo = res.data.data;
         client = new OSS({
